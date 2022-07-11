@@ -13,7 +13,12 @@ function rot13(encodedStr){
   let decodedArr = []; // Your Result goes here
   // Only change code below this line
   // your code here
+  for(var s in encodedStr){
+    decodedArr.push(String.fromCharCode(97 + ((encodedStr.charCodeAt(s) - 97 + 13)%26)));
+    // console.log(encodedStr.charCodeAt(s) );
+  }
   // Only change code above this line
+
   return decodedArr.join(""); // Array to String
 }
 
